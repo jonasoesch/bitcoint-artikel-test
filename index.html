@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <!-- saved from url=(0050)https://edit.nzz.ch/articles/1604979/selectionMode -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
+
+
+.highlight-comment {
+  background: none !important
+}
+
+</style>
     <!--<base href="/">--><base href=".">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
@@ -201,167 +208,7 @@
     </ld-article-unsaved></ui-view>
         <!-- uiView: --><ui-view name="master" class="ng-scope"><div class="ld-rows ng-scope" ld-prevent-browser-drag="" ng-class="{&#39;is-ld-application-menu--active&#39;: $ctrl.isApplicationMenuActive}">
   <li-notification-list class="ng-isolate-scope"><div data-v-995f2f86="" class="li-notification-list"><span data-v-995f2f86=""><div data-v-995f2f86="" class="li-notification-list-section--bottom-left"></div></span><span data-v-995f2f86=""><div data-v-995f2f86="" class="li-notification-list-section--top"></div></span><span data-v-995f2f86=""><div data-v-995f2f86="" class="li-notification-list-section--banner"></div></span></div></li-notification-list>
-  <div class="ld-rows__item ld-top-bar" ng-mouseleave="$ctrl.closeApplicationMenu()">
-    <!-- uiView: --><ui-view name="toolbar" qa="toolbar" class="ng-scope"><li-edit-document-toolbar mode="edit" class="ng-scope ng-isolate-scope"><div ng-hide="$ctrl.isEditingMetadataImage()">
-  <!-- Toolbar Save State and Toolbar Header -->
-  <div class="ld-top-bar__row ld-top-bar__row--meta">
-    <div class="ld-top-bar__status" data-tour="top-bar-document-status">
-      <!-- ngIf: !$ctrl.isInConflictMode() --><ld-save-status ng-if="!$ctrl.isInConflictMode()" class="ng-scope ng-isolate-scope">
-      <span class="ld-article__status" ng-switch="$ctrl.saveState.status" qa="document-status">
-
-        <!-- ngSwitchWhen: saved --><span ng-switch-when="saved" class="ng-scope">
-          Saved
-          <li-icon class="ng-isolate-scope"><div name="check-circle" class="li-icon li-icon--circular li-icon--small li-icon--green"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path></svg></div></li-icon>
-        </span><!-- end ngSwitchWhen: -->
-        <!-- ngSwitchWhen: dirty -->
-        <!-- ngSwitchWhen: conflict -->
-        <!-- ngSwitchWhen: permissionDenied -->
-        <!-- ngSwitchWhen: failed -->
-        <!-- ngSwitchWhen: serverError -->
-        <!-- ngSwitchWhen: stopped -->
-        <!-- ngSwitchWhen: failedAttempt -->
-        <!-- ngSwitchWhen: outdated -->
-        <!-- ngSwitchWhen: readOnly -->
-        <!-- ngSwitchDefault: -->
-      </span>
-    </ld-save-status><!-- end ngIf: !$ctrl.isInConflictMode() -->
-      <!-- ngIf: $ctrl.isInConflictMode() -->
-    </div>
-
-    <div class="ld-top-bar__spacer"></div>
-
-    <div class="ld-top-bar__unit">
-      <!-- ngIf: !$ctrl.isEditingTitle --><span class="ld-top-bar__title ng-binding ng-scope" ng-class="{&#39;ld-top-bar__title--editable&#39;: $ctrl.canEditTitle()}" ng-click="$ctrl.toggleTitleEdit()" ng-if="!$ctrl.isEditingTitle" data-tour="top-bar-document-title">
-        Bitcoin und Co. verbrauchen schon jetzt mehr Energie als alle Schweizer zusammen: So könnten sie grüner werden
-      </span><!-- end ngIf: !$ctrl.isEditingTitle -->
-
-      <!-- ngIf: $ctrl.isEditingTitle -->
-
-      <!-- ngIf: $ctrl.getLanguageLabel() -->
-      <!-- ngIf: $ctrl.isMultichannel() --><span ng-if="$ctrl.isMultichannel()" class="ld-top-bar__channel ng-binding ng-scope">
-        Web
-      </span><!-- end ngIf: $ctrl.isMultichannel() -->
-    </div>
-
-    <div class="ld-top-bar__spacer"></div>
-  </div>
-  <!-- Toolbar Document Edit or Toolbar Document Archived -->
-  <!-- ngIf: $ctrl.isEditingContent() || $ctrl.isDocumentArchived() --><div class="ld-top-bar__row ld-top-bar__row--actions ng-scope" ng-if="$ctrl.isEditingContent() || $ctrl.isDocumentArchived()">
-    <div class="ld-top-bar__unit">
-      <li-toolbar-back-button class="ld-top-bar__item ng-isolate-scope" draft="$ctrl.draft">
-    <!-- ngIf: $ctrl.draft --><a class="ld-btn ld-btn--circle ng-scope" ui-sref="app.articles" qa="editor-toolbar-back-btn" ng-if="$ctrl.draft" data-tour="article-detail-back-button" href="https://edit.nzz.ch/articles">
-      <li-icon class="ng-isolate-scope"><div name="chevron-left" class="li-icon li-icon--default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg></div></li-icon>
-    </a><!-- end ngIf: $ctrl.draft -->
-    <!-- ngIf: $ctrl.simpleBack -->
-    </li-toolbar-back-button>
-    </div>
-    <div class="ld-top-bar__unit ld-top-bar__unit--right-aligned hide--mobile hide--tablet">
-      <!-- ngRepeat: actions in $ctrl.groups --><!-- ngIf: !$ctrl.isDocumentArchived() --><li-toolbar-action-group ng-if="!$ctrl.isDocumentArchived()" ng-repeat="actions in $ctrl.groups" class="toolbar-action-group ng-scope ng-isolate-scope" actions="actions" draft="$ctrl.draft">
-      <li-split-view-toolbar-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <!-- ngIf: $ctrl.isEnabled() --><button class="ld-btn ld-btn--toolbar toolbar-action ng-binding ng-scope" qa="toolbar-split-view-button" ng-if="$ctrl.isEnabled()" ng-click="$ctrl.toggle()" data-tour="article-detail-split-view-button">
-      <!-- ngIf: !$ctrl.isSelected() --><li-icon ng-if="!$ctrl.isSelected()" class="ng-scope ng-isolate-scope"><div name="responsive" class="li-icon li-icon--centered li-icon--default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,6V16H9V12A2,2 0 0,1 11,10H16A2,2 0 0,1 18,12V16H20V6H4M0,20V18H4A2,2 0 0,1 2,16V6A2,2 0 0,1 4,4H20A2,2 0 0,1 22,6V16A2,2 0 0,1 20,18H24V20H18V20C18,21.11 17.1,22 16,22H11A2,2 0 0,1 9,20H9L0,20M11.5,20A0.5,0.5 0 0,0 11,20.5A0.5,0.5 0 0,0 11.5,21A0.5,0.5 0 0,0 12,20.5A0.5,0.5 0 0,0 11.5,20M15.5,20A0.5,0.5 0 0,0 15,20.5A0.5,0.5 0 0,0 15.5,21A0.5,0.5 0 0,0 16,20.5A0.5,0.5 0 0,0 15.5,20M13,20V21H14V20H13M11,12V19H16V12H11Z"></path></svg></div></li-icon><!-- end ngIf: !$ctrl.isSelected() -->
-      <!-- ngIf: $ctrl.isSelected() -->
-      Preview
-    </button><!-- end ngIf: $ctrl.isEnabled() -->
-    </li-split-view-toolbar-action><li-collaboration-toolbar-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <div class="ld-badge ld-badge--calm ld-badge--comments toolbar-action" data-badge="22">
-      <button class="ld-btn ld-btn--toolbar toolbar-action is-active" qa="toolbar-collaboration-btn" ng-class="{&#39;is-disabled&#39;: $ctrl.isDisabled(), &#39;is-active&#39;: $ctrl.workspace.showCollabBar()}" ng-disabled="$ctrl.isDisabled()" ng-click="$ctrl.showCollabBar()">
-        <li-icon class="ng-isolate-scope"><div name="comment-multiple-outline" class="li-icon li-icon--centered li-icon--default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,23A1,1 0 0,1 11,22V19H7A2,2 0 0,1 5,17V7C5,5.89 5.9,5 7,5H21A2,2 0 0,1 23,7V17A2,2 0 0,1 21,19H16.9L13.2,22.71C13,22.9 12.75,23 12.5,23V23H12M13,17V20.08L16.08,17H21V7H7V17H13M3,15H1V3A2,2 0 0,1 3,1H19V3H3V15Z"></path></svg></div></li-icon>
-        Collaboration
-      </button>
-    </div>
-    </li-collaboration-toolbar-action></li-toolbar-action-group><!-- end ngIf: !$ctrl.isDocumentArchived() --><!-- end ngRepeat: actions in $ctrl.groups --><!-- ngIf: !$ctrl.isDocumentArchived() --><li-toolbar-action-group ng-if="!$ctrl.isDocumentArchived()" ng-repeat="actions in $ctrl.groups" class="toolbar-action-group ng-scope ng-isolate-scope" actions="actions" draft="$ctrl.draft">
-      <li-document-soft-lock-toolbar-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <!-- ngIf: $ctrl.isEnabled() --><button class="ld-btn ld-btn--toolbar toolbar-action ng-scope" qa="toolbar-document-lock-button" ng-if="$ctrl.isEnabled()" ng-disabled="$ctrl.isDisabled()" ng-click="$ctrl.toggleLock()">
-      <!-- ngIf: !$ctrl.isLocked() --><span ng-if="!$ctrl.isLocked()" class="ng-scope">
-        <li-icon class="ng-isolate-scope"><div name="lock-open-outline" class="li-icon li-icon--centered li-icon--default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10A2,2 0 0,1 6,8H15V6A3,3 0 0,0 12,3A3,3 0 0,0 9,6H7A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,17A2,2 0 0,1 10,15A2,2 0 0,1 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17Z"></path></svg></div></li-icon>
-        Lock
-      </span><!-- end ngIf: !$ctrl.isLocked() -->
-      <!-- ngIf: $ctrl.isLocked() -->
-    </button><!-- end ngIf: $ctrl.isEnabled() -->
-    </li-document-soft-lock-toolbar-action><li-proofread-diff-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <!-- ngIf: $ctrl.isEnabled() --><button class="ld-btn ld-btn--toolbar toolbar-action ng-scope" ng-if="$ctrl.isEnabled()" ng-click="$ctrl.toggle()">
-      <li-icon class="ng-isolate-scope" name="flashlight"><div name="flashlight" class="li-icon li-icon--centered li-icon--default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9,10L6,5H18L15,10H9M18,4H6V2H18V4M9,22V11H15V22H9M12,13A1,1 0 0,0 11,14A1,1 0 0,0 12,15A1,1 0 0,0 13,14A1,1 0 0,0 12,13Z"></path></svg></div></li-icon>
-      Proofread
-    </button><!-- end ngIf: $ctrl.isEnabled() -->
-    </li-proofread-diff-action><li-selection-mode-toolbar-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <!-- ngIf: $ctrl.shouldRender() --><button class="ld-btn ld-btn--toolbar is-toggleable toolbar-action ng-scope is-active" ng-class="{&#39;is-disabled&#39;: $ctrl.isDisabled(), &#39;is-active&#39;: $ctrl.isActive()}" ng-click="$ctrl.toggle()" ng-if="$ctrl.shouldRender()" ng-disabled="$ctrl.isDisabled()">
-      <li-icon class="ng-isolate-scope"><div name="clipboard-text" class="li-icon li-icon--centered li-icon--default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17,9H7V7H17M17,13H7V11H17M14,17H7V15H14M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"></path></svg></div></li-icon>
-      Selection Mode
-    </button><!-- end ngIf: $ctrl.shouldRender() -->
-    </li-selection-mode-toolbar-action><li-translation-toolbar-action document="$ctrl.document" class="ng-scope ng-isolate-scope"><div class="li-translation-toolbar-action toolbar-action-wrapper" document="$ctrl.document"><!----> <!----></div></li-translation-toolbar-action><li-push-notifications-toolbar-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <!-- ngIf: $ctrl.shouldRender() -->
-    </li-push-notifications-toolbar-action></li-toolbar-action-group><!-- end ngIf: !$ctrl.isDocumentArchived() --><!-- end ngRepeat: actions in $ctrl.groups --><!-- ngIf: !$ctrl.isDocumentArchived() --><li-toolbar-action-group ng-if="!$ctrl.isDocumentArchived()" ng-repeat="actions in $ctrl.groups" class="toolbar-action-group ng-scope ng-isolate-scope" actions="actions" draft="$ctrl.draft">
-      <li-copy-toolbar-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <!-- ngIf: $ctrl.shouldRender() --><button class="ld-btn ld-btn--toolbar toolbar-action ng-scope" ng-class="{&#39;is-disabled&#39;: $ctrl.isDirty()}" ng-disabled="$ctrl.isDirty()" ng-click="$ctrl.copyArticle()" ng-if="$ctrl.shouldRender()">
-      <li-icon class="ng-isolate-scope"><div name="content-duplicate" class="li-icon li-icon--centered li-icon--default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11,17H4A2,2 0 0,1 2,15V3A2,2 0 0,1 4,1H16V3H4V15H11V13L15,16L11,19V17M19,21V7H8V13H6V7A2,2 0 0,1 8,5H19A2,2 0 0,1 21,7V21A2,2 0 0,1 19,23H8A2,2 0 0,1 6,21V19H8V21H19Z"></path></svg></div></li-icon>
-      Copy
-    </button><!-- end ngIf: $ctrl.shouldRender() -->
-    </li-copy-toolbar-action><li-undo-toolbar-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <!-- ngIf: $ctrl.isShown -->
-    </li-undo-toolbar-action><li-redo-toolbar-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <!-- ngIf: $ctrl.isShown -->
-    </li-redo-toolbar-action></li-toolbar-action-group><!-- end ngIf: !$ctrl.isDocumentArchived() --><!-- end ngRepeat: actions in $ctrl.groups --><!-- ngIf: !$ctrl.isDocumentArchived() --><li-toolbar-action-group ng-if="!$ctrl.isDocumentArchived()" ng-repeat="actions in $ctrl.groups" class="toolbar-action-group ng-scope ng-isolate-scope" actions="actions" draft="$ctrl.draft">
-      <li-history-toolbar-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <button class="ld-btn ld-btn--toolbar toolbar-action is-disabled" ui-sref="app.editor.article.history.compare({
-        revisionFromId: $ctrl.draft.revisionId,
-        revisionToId: 0
-      })" ng-class="{&#39;is-disabled&#39;: $ctrl.isReadOnly(), &#39;is-active&#39;: $ctrl.isActive()}" ng-disabled="$ctrl.isReadOnly()" data-tour="article-detail-history-button" href="/articles/1604979/history/compare/29897694/with/0" disabled="disabled">
-      <li-icon class="ng-isolate-scope"><div name="history" class="li-icon li-icon--centered li-icon--default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3"></path></svg></div></li-icon>
-      History
-    </button>
-    </li-history-toolbar-action><li-tasks-toolbar-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <!-- ngIf: $ctrl.getPendingTasksCount() && $ctrl.shouldRender() --><div class="ld-badge toolbar-action ng-scope ld-badge--calm" ng-class="{&#39;ld-badge--calm&#39;: !$ctrl.hasHighPriorityTask()}" data-badge="1" ng-if="$ctrl.getPendingTasksCount() &amp;&amp; $ctrl.shouldRender()">
-      <button class="ld-btn ld-btn--toolbar is-disabled" ui-sref="app.editor.article.write.tasks" ui-sref-active="is-active" ng-class="{&#39;is-disabled&#39;: $ctrl.isReadOnly()}" ng-disabled="$ctrl.isReadOnly()" "data-tour="article-detail-tasks-button" href="/articles/1604979/info/tasks" disabled="disabled">
-        <li-icon class="ng-isolate-scope"><div name="clipboard-check" class="li-icon li-icon--centered li-icon--default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"></path></svg></div></li-icon>
-        Tasks
-      </button>
-    </div><!-- end ngIf: $ctrl.getPendingTasksCount() && $ctrl.shouldRender() -->
-
-    <!-- ngIf: !$ctrl.getPendingTasksCount() && $ctrl.shouldRender() -->
-    </li-tasks-toolbar-action><li-insert-toolbar-action draft="$ctrl.draft" document="$ctrl.document" class="toolbar-action-wrapper ng-scope ng-isolate-scope">
-    <button class="ld-btn ld-btn--toolbar toolbar-action is-toggleable" ng-click="$ctrl.toggleInsertComponentMode()" ng-class="{&#39;is-disabled&#39;: $ctrl.isDisabled(),
-        &#39;is-active&#39;: $ctrl.isActive()}" ng-disabled="$ctrl.isDisabled()" data-tour="article-detail-insert-button">
-      <li-icon class="ng-isolate-scope"><div name="plus" class="li-icon li-icon--centered li-icon--default"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path></svg></div></li-icon>
-      Insert
-    </button>
-    </li-insert-toolbar-action></li-toolbar-action-group><!-- end ngIf: !$ctrl.isDocumentArchived() --><!-- end ngRepeat: actions in $ctrl.groups -->
-    </div>
-    <div class="ld-top-bar__unit">
-      <!-- ngIf: !$ctrl.isDocumentArchived() --><li-toolbar-prepare-publish-button ng-if="!$ctrl.isDocumentArchived()" class="ld-top-bar__item ng-scope ng-isolate-scope" channel-mode="$ctrl.getChannelMode()" label="$ctrl.preparePublishLabel">
-    <button class="ld-btn ng-binding ld-btn--primary" ng-click="$ctrl.goToPreparePublish()" ng-class="{&#39;ld-btn--disabled&#39;: !$ctrl.isEnabled(),
-        &#39;ld-btn--primary&#39;: !$ctrl.hasReadyForReviewProposals(),
-        &#39;ld-btn--numberdot&#39;: $ctrl.hasReadyForReviewProposals(),
-        &#39; ld-btn--default&#39;: $ctrl.hasReadyForReviewProposals()}" data-tour="article-detail-prepare-publish-button" title="0 unreviewed proposals">
-      Prepare Publication
-      <!-- ngIf: $ctrl.hasReadyForReviewProposals() -->
-    </button>
-    </li-toolbar-prepare-publish-button><!-- end ngIf: !$ctrl.isDocumentArchived() -->
-      <!-- ngIf: $ctrl.isDocumentArchived() -->
-      <li-app-menu class="ng-isolate-scope"><div data-v-7b6047a3="" class="li-app-menu ld-top-bar__item"><!----> <div data-v-7b6047a3="" qa="app-menu" class="push-half--left pos-rel offset-user-icon"><a data-v-7b6047a3=""><img data-v-7b6047a3="" src="./files/jonas.oesch@nzz.ch" srcset="https://imgr.io/livingdocs/gravatar/s:72/jonas.oesch@nzz.ch 2x" width="36" height="36" class="ld-circle ld-link-au-naturel"> <div data-v-7b6047a3="" class="new-indicator"></div></a> <div data-v-7b6047a3="" class="ld-application-menu ld-application-menu--right"><div data-v-7b6047a3="" class="ld-application-menu__panel"><div data-v-7b6047a3="" class="ld-application-menu__group"><div data-v-7b6047a3="" class="ld-burst flush--top"></div> <h2 data-v-7b6047a3="" class="ld-application-menu__label">
-            Signed in as
-          </h2> <ul data-v-7b6047a3="" class="push-half--bottom flush--bottom-mobile"><li data-v-7b6047a3=""><span data-v-7b6047a3="" class="ld-link--bar is-passive weight--bold">
-                Jonas Oesch
-              </span></li> <li data-v-7b6047a3=""><a data-v-60aa10fd="" data-v-7b6047a3="" href="https://wiki.nzzmg.ch/confluence/display/CMS/What%27s+New" target="_blank" class="li-nav-entry ld-link ld-link--bar weight--normal"><div data-v-60aa10fd="" name="open-in-new" class="li-icon li-icon--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"></path></svg></div>
-    What's new
-    <div data-v-60aa10fd="" class="new-indicator"></div> <!----></a></li><li data-v-7b6047a3=""><a data-v-60aa10fd="" data-v-7b6047a3="" href="https://wiki.nzzmg.ch/confluence/display/RED/Livingdocs+Hilfeseite" target="_blank" class="li-nav-entry ld-link ld-link--bar weight--normal"><div data-v-60aa10fd="" name="open-in-new" class="li-icon li-icon--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"></path></svg></div>
-    Get help
-    <div data-v-60aa10fd="" class="new-indicator"></div> <!----></a></li></ul></div> <div data-v-7b6047a3="" class="ld-application-menu__group"><div data-v-7b6047a3="" class="ld-burst flush--top"></div> <h2 data-v-7b6047a3="" class="ld-application-menu__label">
-            Manage
-          </h2> <ul data-v-7b6047a3="" class="push-half--top push-half--bottom flush--bottom-mobile"><!----> <li data-v-7b6047a3=""><a data-v-60aa10fd="" data-v-7b6047a3="" href="https://edit.nzz.ch/user" target="_self" class="li-nav-entry ld-link ld-link--bar weight--normal"><div data-v-60aa10fd="" name="account" class="li-icon li-icon--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path></svg></div>
-    Your Profile
-    <!----> <!----></a></li><li data-v-7b6047a3=""><a data-v-60aa10fd="" data-v-7b6047a3="" href="https://edit.nzz.ch/logout" target="_self" class="li-nav-entry ld-link ld-link--bar weight--normal"><div data-v-60aa10fd="" name="logout-variant" class="li-icon li-icon--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.08,15.59L16.67,13H7V11H16.67L14.08,8.41L15.5,7L20.5,12L15.5,17L14.08,15.59M19,3A2,2 0 0,1 21,5V9.67L19,7.67V5H5V19H19V16.33L21,14.33V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5C3,3.89 3.89,3 5,3H19Z"></path></svg></div>
-    Logout
-    <!----> <!----></a></li></ul></div></div></div></div></div></li-app-menu>
-    </div>
-  </div><!-- end ngIf: $ctrl.isEditingContent() || $ctrl.isDocumentArchived() -->
-
-  <!-- Toolbar Document Publish -->
-  <!-- ngIf: $ctrl.isPublishing() -->
-
-</div>
-</li-edit-document-toolbar></ui-view>
-  </div>
+ 
 
   <!-- ngInclude: --><ng-include qa="navigation-panel" src="&#39;navigation_panel.html&#39;" class="ng-scope"><div class="ld-application-menu ld-application-menu--left ng-scope" ng-mouseenter="$ctrl.openApplicationMenu()" ng-mouseleave="$ctrl.closeApplicationMenu()">
   <div class="ld-application-menu__panel">
@@ -403,79 +250,13 @@
 </ng-include>
 
   <!-- uiView: main --><div class="ld-rows__item ld-rows__item--fill ng-scope" ui-view="main"><div class="ld-rows ng-scope">
-  <!-- ngIf: $ctrl.hasDocumentLoaded() --><ld-document-status ng-if="$ctrl.hasDocumentLoaded()" class="ng-scope ng-isolate-scope">
-      <!-- ngIf: $ctrl.status.name --><div ng-if="$ctrl.status.name" ng-switch="$ctrl.status.name" class="ld-notify ld-notify--warning ld-notify--document-status ng-scope" ng-class="{
-          &#39;ld-notify--warning&#39;: !$ctrl.status.error,
-          &#39;ld-notify--error&#39;: $ctrl.status.error
-        }">
-        <!-- ngSwitchWhen: conflict -->
-        <!-- ngSwitchWhen: stopped -->
-        <!-- ngSwitchWhen: permissionDenied -->
-        <!-- ngSwitchWhen: serverError -->
-        <!-- ngSwitchWhen: readOnly --><div ng-switch-when="readOnly" class="ng-scope">
-          <span ng-bind-html="$ctrl.status.message" class="ng-binding">The document is in selection mode</span>
-        </div><!-- end ngSwitchWhen: -->
-        <!-- ngSwitchWhen: lock -->
-        <!-- ngSwitchWhen: softLock -->
-        <!-- ngSwitchWhen: workedOn -->
-        <!-- ngSwitchWhen: outdated -->
-        <!-- ngSwitchWhen: archived -->
-        <!-- ngSwitchWhen: printRemoteLock -->
-      </div><!-- end ngIf: $ctrl.status.name -->
-    </ld-document-status><!-- end ngIf: $ctrl.hasDocumentLoaded() -->
+
 
   <div class="ld-rows__item ld-rows__item--fill ld-absolute-space">
     <!-- uiView: main --><div ui-view="main" class="ld-absolute-space__fill ng-scope"><div class="ld-rows ng-scope">
   <div>
     <!-- ngIf: $ctrl.showCollabBar() --><ld-collab-bar ng-if="$ctrl.showCollabBar()" class="ng-scope">
-      <div class="ld-collab-bar">
 
-        <div class="ld-collab-bar__center">
-
-          <div class="ld-collab-bar__group">
-
-            <!-- ngIf: $ctrl.moderatedCollabEnabled -->
-
-            <!-- ngIf: $ctrl.proposalManager.isEnabled -->
-
-            <!-- ngIf: $ctrl.proposalManager.isEnabled -->
-
-            <ul class="ld-collab-bar__info hide--tablet hide--mobile ng-isolate-scope" ng-class="{&#39;ld-collab-bar__info--divider&#39;: $ctrl.proposalManager.isEnabled}" ld-dropdown-state="$ctrl.dropdown" qa="collab-bar-comments-menu">
-              <li class="ld-collab-bar__info-item ld-collab-bar__info-item--expandable">
-                <span ng-class="{&#39;is-open&#39;: $ctrl.dropdown.isOpen}">
-                  <span class="li-numberdot li-numberdot--comment li-numberdot--collab-bar ng-binding">
-                    22
-                  </span>
-                  <span class="text--secondary">
-                    comment<!-- ngIf: $ctrl.commentsLength !== 1 --><span ng-if="$ctrl.commentsLength !== 1" class="ng-scope">s</span><!-- end ngIf: $ctrl.commentsLength !== 1 --> to resolve
-                  </span>
-                  <li-icon class="ng-isolate-scope"><div name="chevron-down" class="li-icon li-icon--grey li-icon--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path></svg></div></li-icon>
-                </span>
-                <ul ld-dropdown-state-exclude="" ng-class="{&#39;is-open&#39;: $ctrl.dropdown.isOpen}" class="ld-menu ld-menu--simple">
-                  <li class="ld-menu__item ld-menu__item--toggle" ng-click="$ctrl.toggleIgnoreOpenComments()" ng-class="{&#39;is-inactive&#39;: $ctrl.ignoreOpenComments}">
-                    <li-icon class="ld-menu__icon--active ng-isolate-scope"><div name="check" class="li-icon li-icon--green li-icon--small ld-menu__icon ld-menu__icon--active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></div></li-icon>
-                    <li-icon class="ld-menu__icon--inactive ng-isolate-scope"><div name="circle-small" class="li-icon li-icon--green li-icon--small ld-menu__icon ld-menu__icon--inactive"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,10A2,2 0 0,0 10,12C10,13.11 10.9,14 12,14C13.11,14 14,13.11 14,12A2,2 0 0,0 12,10Z"></path></svg></div></li-icon>
-                    Show Open
-                  </li>
-                  <li class="ld-menu__item ld-menu__item--toggle is-inactive" ng-click="$ctrl.toggleIgnoreResolvedComments()" ng-class="{&#39;is-inactive&#39;: $ctrl.ignoreResolvedComments}" qa="collab-bar-comments-show-resolved">
-                    <li-icon class="ld-menu__icon--active ng-isolate-scope"><div name="check" class="li-icon li-icon--green li-icon--small ld-menu__icon ld-menu__icon--active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></div></li-icon>
-                    <li-icon class="ld-menu__icon--inactive ng-isolate-scope"><div name="circle-small" class="li-icon li-icon--green li-icon--small ld-menu__icon ld-menu__icon--inactive"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,10A2,2 0 0,0 10,12C10,13.11 10.9,14 12,14C13.11,14 14,13.11 14,12A2,2 0 0,0 12,10Z"></path></svg></div></li-icon>
-                    Show Resolved
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-          </div>
-
-          <div class="ld-collab-bar__group">
-            <!-- ngRepeat: user in $ctrl.editingUsers -->
-            <!-- ngRepeat: user in $ctrl.idleUsers --><div class="ld-collab-user ld-collab-user--idle ng-scope" ng-repeat="user in $ctrl.idleUsers">
-              <img class="ld-collab-user__image" src="./files/ruth.fulterer@nzz.ch" alt="Ruth Fulterer" title="Ruth Fulterer">
-            </div><!-- end ngRepeat: user in $ctrl.idleUsers -->
-          </div>
-        </div>
-      </div>
       </ld-collab-bar><!-- end ngIf: $ctrl.showCollabBar() -->
     <!-- ngIf: $ctrl.showConflictView() -->
   </div>
@@ -506,8 +287,7 @@
 
           <!-- ngIf: $ctrl.isTextCountEnabled() --><div ng-if="$ctrl.isTextCountEnabled()" class="ld-bottombar ng-scope">
 
-            <!-- ngIf: $ctrl.textcount --><li-char-counter ng-if="$ctrl.textcount" class="ng-scope ng-isolate-scope" count="12779"><div data-v-6f831270="" qa="character-counter" class="li-character-counter"><span data-v-6f831270="">12779</span> characters
-</div></li-char-counter><!-- end ngIf: $ctrl.textcount -->
+ 
 
           </div><!-- end ngIf: $ctrl.isTextCountEnabled() -->
         </div>

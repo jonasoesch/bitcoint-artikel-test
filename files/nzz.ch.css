@@ -2,15 +2,6 @@
     Font: GT Amercia
 \* ------------------------------------ */
 
-.highlight-comment {
-    background: none !important;
-}
-
-.ld-spellcheck {
-    border-bottom: none !important;
-    background: none !important;
-}
-
 @font-face {
     font-weight: 100;
     font-family: nzz-sans-serif;
